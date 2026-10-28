@@ -163,6 +163,47 @@ h3 { font-size: 18px; line-height: 1.4; font-weight: 600; letter-spacing: -.4px;
 .project-status { font: 9px var(--mono); margin-left: auto; color: #8193ac; }
 .project-status:before { content: ""; display: inline-block; width: 4px; height: 4px; background: #657c99; border-radius: 50%; margin-right: 6px; }
 
+/* Astra: a private project overview, styled with the existing card system. */
+.astra-project { padding: 32px; margin-bottom: 24px; border: 1px solid #62ddf225; border-radius: 9px; background: radial-gradient(ellipse at top left, #17435926, transparent 65%), var(--surface); }
+.astra-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.astra-heading .eyebrow { margin-bottom: 12px; font-size: 12px; }
+.astra-heading h3 { font-size: 30px; }
+.astra-heading h3 span { color: var(--cyan); font-weight: 400; }
+.project-availability { display: flex; align-items: center; gap: 10px; font: 11px/1.7 var(--mono); letter-spacing: .7px; color: var(--cyan); }
+.project-availability .status-dot { flex-shrink: 0; }
+.astra-description { max-width: 950px; margin: 24px 0; font-size: 15px; line-height: 1.75; color: #b3c0d2; }
+.astra-features { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.astra-feature { padding: 22px 20px; border: 1px solid var(--line); border-radius: 7px; background: #0e1724; transition: border-color .25s, background .25s; }
+.astra-feature:hover { border-color: #62ddf247; background: #111f30; }
+.astra-feature img { display: block; margin-bottom: 20px; }
+.astra-feature h4 { font-size: 15px; line-height: 1.5; margin: 0 0 10px; font-weight: 600; }
+.astra-feature p { font-size: 14px; line-height: 1.7; color: #b3c0d2; margin: 0; }
+.astra-details { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 18px; }
+.astra-details summary { width: fit-content; cursor: pointer; color: var(--cyan); font-size: 14px; }
+.astra-details summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 6px; }
+.technical-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+.technical-tags li { font-size: 12px; color: #b3c0d2; padding: 5px 10px; border: 1px solid var(--line); border-radius: 4px; background: #ffffff02; }
+.astra-availability { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 18px; }
+.astra-availability p { font-size: 13px; color: var(--muted); margin: 0; }
+.astra-availability a { flex-shrink: 0; font-size: 14px; color: var(--cyan); }
+.astra-availability a:hover { color: #b8f4ff; }
+.astra-availability a span { margin-left: 10px; }
+.supporting-projects { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Independent recommendations share the portfolio's visual language. */
+.recommendations-section .section-heading { margin-bottom: 20px; }
+.recommendations-subtitle { font-size: 18px; color: #dce5f3; margin: 0 0 12px; }
+.recommendations-intro { font-size: 15px; line-height: 1.75; color: #b3c0d2; max-width: 850px; margin: 0 0 32px; }
+.recommendations-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.recommendation-card { display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: 9px; background: linear-gradient(135deg, #111b2a88, #0d1421); transition: border-color .25s, transform .25s; }
+.recommendation-card:hover { border-color: #62ddf23b; transform: translateY(-4px); }
+.recommendation-heading { display: flex; align-items: center; gap: 18px; }
+.recommendation-heading h3 { font-size: 23px; }
+.recommendation-category { font: 12px/1.7 var(--mono); letter-spacing: 1px; color: var(--cyan); margin: 24px 0 14px; }
+.recommendation-description { font-size: 15px; line-height: 1.7; color: #b3c0d2; margin: 0 0 24px; }
+.recommendation-card .organization-link { margin-top: auto; }
+.recommendations-note { font-size: 12px; color: var(--muted); margin: 20px 0 0; }
+
 /* Contact and footer */
 .contact-section { padding-bottom: 80px; }
 .contact-panel { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; padding: 48px; background: radial-gradient(ellipse at 0 0, #17435936, transparent 65%), #0d1623; border: 1px solid #62ddf21d; border-radius: 12px; }
@@ -190,6 +231,8 @@ a.contact-row:hover b { color: var(--cyan); }
 /* Tablet */
 @media (min-width: 1440px) { .hero-layout { min-height: 700px; } }
 @media (max-width: 1100px) {
+  .astra-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .astra-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
   .container { width: calc(100% - 64px); }
   nav { gap: 20px; }
   h1 { font-size: 57px; }
@@ -204,6 +247,10 @@ a.contact-row:hover b { color: var(--cyan); }
 
 /* Mobile, including an expanded navigation fallback without JS */
 @media (max-width: 760px) {
+  .astra-project { padding: 24px 20px; }
+  .astra-availability { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .recommendations-grid { grid-template-columns: 1fr; }
+  .recommendation-card { padding: 24px; }
   html { scroll-padding-top: 90px; }
   .container { width: calc(100% - 40px); }
   .header-inner { height: 72px; flex-wrap: wrap; }
@@ -261,6 +308,7 @@ a.contact-row:hover b { color: var(--cyan); }
   .contact-section { padding-bottom: 50px; }
 }
 @media (max-width: 600px) {
+  .astra-features { grid-template-columns: 1fr; }
   .experience-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 390px) {
@@ -277,4 +325,5 @@ a.contact-row:hover b { color: var(--cyan); }
   html { scroll-behavior: auto; }
   *, *:before, *:after { animation: none !important; transition: none !important; }
   .button:hover, .experience-card:hover { transform: none; }
+  .recommendation-card:hover { transform: none; }
 }
