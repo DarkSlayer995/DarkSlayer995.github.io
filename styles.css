@@ -111,16 +111,19 @@ h3 { font-size: 18px; line-height: 1.4; font-weight: 600; letter-spacing: -.4px;
 .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
 .org-icon { display: grid; place-items: center; flex: 0 0 60px; width: 60px; height: 60px; padding: 8px; border: 1px solid #62ddf221; background: #62ddf208; color: var(--cyan); border-radius: 9px; }
 .org-icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.card-index { font: 10px var(--mono); color: #8495ad; }
-.experience-card h3 { font-size: 17px; }
-.role { color: var(--cyan); font-size: 11px; margin: 6px 0 16px; min-height: 37px; }
-.experience-card > p:not(.role) { font-size: 12px; color: var(--muted); line-height: 1.85; margin: 0 0 26px; }
+.card-index { font: 12px var(--mono); color: #9aabc1; }
+.experience-card h3 { font-size: 19px; }
+.experience-card .role { color: var(--cyan); font-size: 14px; line-height: 1.6; margin: 8px 0 20px; min-height: 3.2em; }
+.experience-card > p:not(.role) { font-size: 15px; color: #b3c0d2; line-height: 1.65; margin: 0 0 26px; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
-.organization-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; padding: 12px 10px; border: 1px solid #62ddf21a; border-radius: 5px; background: #62ddf204; font-size: 11px; color: var(--cyan); transition: color .2s, background .2s, border-color .2s; }
+.organization-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; padding: 12px 10px; border: 1px solid #62ddf21a; border-radius: 5px; background: #62ddf204; font-size: 14px; color: var(--cyan); transition: color .2s, background .2s, border-color .2s; }
 .organization-link > span[aria-hidden] { transition: transform .2s; }
 .organization-link:hover, .organization-link:focus-visible { color: #b8f4ff; background: #62ddf20c; border-color: #62ddf23b; }
 .organization-link:hover > span[aria-hidden], .organization-link:focus-visible > span[aria-hidden] { transform: translate(2px, -2px); }
 .card-tags span, .project-footer > span:not(.project-status) { font: 9px var(--mono); color: #94a9c1; padding: 4px 7px; border: 1px solid #ffffff0b; border-radius: 4px; background: #ffffff02; }
+.experience-card .card-tags span { font-size: 12px; line-height: 1.5; color: #aebed2; }
+#experience .eyebrow { font-size: 12px; }
+#experience .section-heading > p { font-size: 14px; }
 .skills-section { background: #0b111c; }
 .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .skill-card { padding: 24px 22px; border: 1px solid var(--line); border-radius: 7px; background: #0e1724; transition: border-color .25s, background .25s; }
@@ -194,7 +197,6 @@ a.contact-row:hover b { color: var(--cyan); }
   .hero-tags { gap: 7px; font-size: 8px; }
   .hero-layout { min-height: 620px; }
   .experience-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .role { min-height: auto; }
   .about-layout { gap: 50px; }
   .contact-panel { gap: 35px; padding: 35px; }
   .contact-intro h2 { font-size: 30px; }
@@ -241,10 +243,6 @@ a.contact-row:hover b { color: var(--cyan); }
   h2 { font-size: 30px; }
   .experience-grid { gap: 12px; }
   .experience-card { padding: 22px 18px; }
-  .experience-card h3 { font-size: 16px; }
-  .role { min-height: 35px; }
-  .experience-card > p:not(.role) { font-size: 11px; }
-  .card-tags span { font-size: 8px; }
   .skills-grid { gap: 12px; }
   .skill-card { padding: 22px 17px; }
   .skill-card h3 { font-size: 12px; }
@@ -262,13 +260,14 @@ a.contact-row:hover b { color: var(--cyan); }
   .site-footer p { order: 3; flex-basis: 100%; margin: 4px 0 0; }
   .contact-section { padding-bottom: 50px; }
 }
+@media (max-width: 600px) {
+  .experience-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 390px) {
   .container { width: calc(100% - 32px); }
   .hero-role { font-size: 14px; }
   .hero-tags { font-size: 7px; }
   .button { padding: 11px 15px; gap: 16px; font-size: 11px; }
-  .experience-grid { grid-template-columns: 1fr; }
-  .role { min-height: auto; }
   .contact-panel { padding: 22px; }
   .contact-intro h2 { font-size: 26px; }
   .contact-icon { width: 32px; height: 32px; }
