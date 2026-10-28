@@ -39,8 +39,8 @@ If working on another branch, merge the reviewed changes into `main` first. This
 ## Customize content
 
 - Edit text and cards directly in `index.html`.
-- GitHub links use the supplied public identity, `DarkSlayer995`.
-- Discord and personal contact are non-clickable placeholders. Replace them only with information you want public. Use a real public Discord profile/invitation URL or a deliberate public `mailto:` link.
+- GitHub links use the supplied public identity, `DarkSlayer995`. Each experience card also links to its supplied organization website or Discord invite. Landkreis Rheintal is identified as a FiveM role.
+- The contact section lists the approved public business email, Discord username, and Discord user ID. The email uses a `mailto:` link. Keep these details up to date and publish only contact information you intend to share.
 - Projects are general work overviews. Add real repository or download links only when they are ready to share.
 - Experience descriptions are broad role summaries based on the supplied titles. Review them for personal accuracy before publishing. No dates, metrics, endorsements, or private detection methods are included.
 - Change colors and type stacks using the variables at the start of `styles.css`.
@@ -49,7 +49,7 @@ If working on another branch, merge the reviewed changes into `main` first. This
 
 ## Accessibility and privacy
 
-Includes semantic headings, a skip link, visible keyboard focus, accessible navigation state, Escape-to-close mobile navigation, and reduced-motion support. Animations are decorative. External GitHub links announce that they open a new tab. No tracking scripts, embedded third-party resources, contact forms, cookies, or client-side storage.
+Includes semantic headings, a skip link, visible keyboard focus, accessible navigation state, Escape-to-close mobile navigation, and reduced-motion support. Animations are decorative. External website and Discord invite links announce that they open a new tab. No tracking scripts, embedded third-party resources, contact forms, cookies, or client-side storage.
 
 ## QA after edits
 

@@ -113,11 +113,14 @@ h3 { font-size: 18px; line-height: 1.4; font-weight: 600; letter-spacing: -.4px;
 .org-icon.echo { font: bold 27px Arial; }
 .org-icon.matrix { color: #a4b5f5; border-color: #a4b5f526; background: #a4b5f508; font-size: 24px; }
 .org-icon.gtm { color: #6bddb8; border-color: #6bddb826; }
+.org-icon.fivem { color: #f2bb83; border-color: #f2bb8326; background: #f2bb8308; font-size: 13px; letter-spacing: -1px; }
 .card-index { font: 10px var(--mono); color: #8495ad; }
 .experience-card h3 { font-size: 17px; }
 .role { color: var(--cyan); font-size: 11px; margin: 6px 0 16px; min-height: 37px; }
 .experience-card > p:not(.role) { font-size: 12px; color: var(--muted); line-height: 1.85; margin: 0 0 26px; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.organization-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--line); font-size: 11px; color: var(--cyan); transition: color .2s; }
+.organization-link:hover { color: #b8f4ff; }
 .card-tags span, .project-footer > span:not(.project-status) { font: 9px var(--mono); color: #94a9c1; padding: 4px 7px; border: 1px solid #ffffff0b; border-radius: 4px; background: #ffffff02; }
 .section-note { font-size: 10px; color: #8090a6; margin: 20px 0 0; }
 .skills-section { background: #0b111c; }
@@ -171,10 +174,12 @@ h3 { font-size: 18px; line-height: 1.4; font-weight: 600; letter-spacing: -.4px;
 .contact-icon { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid #ffffff0d; border-radius: 7px; font: 17px var(--mono); color: var(--cyan); }
 .contact-row b { display: block; font-size: 13px; font-weight: 500; }
 .contact-row small { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
+.contact-details { min-width: 0; overflow-wrap: anywhere; }
+.contact-row .discord-username { color: #c1d0e2; }
+.contact-row .discord-id { margin-top: 5px; font-size: 10px; }
+.discord-id span { font-family: var(--mono); }
 .contact-arrow { margin-left: auto; color: var(--cyan); }
 a.contact-row:hover b { color: var(--cyan); }
-.pending { margin-left: auto; white-space: nowrap; font: 8px var(--mono); color: #93a4b9; border: 1px solid #ffffff10; padding: 4px 7px; border-radius: 4px; }
-.placeholder .contact-icon { color: #8397b1; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); padding-block: 30px; }
 .site-footer .brand { font-size: 15px; }
 .site-footer p { font-size: 10px; color: #7e8da4; }
@@ -195,7 +200,6 @@ a.contact-row:hover b { color: var(--cyan); }
   .about-layout { gap: 50px; }
   .contact-panel { gap: 35px; padding: 35px; }
   .contact-intro h2 { font-size: 30px; }
-  .pending { font-size: 7px; }
 }
 
 /* Mobile, including an expanded navigation fallback without JS */
@@ -256,7 +260,6 @@ a.contact-row:hover b { color: var(--cyan); }
   .contact-intro > p:not(.eyebrow) { max-width: none; }
   .contact-row { padding: 20px 0; gap: 12px; }
   .contact-row small { font-size: 10px; }
-  .pending { font-size: 7px; padding: 3px 5px; }
   .site-footer { flex-wrap: wrap; gap: 10px; padding-block: 25px; }
   .site-footer p { order: 3; flex-basis: 100%; margin: 4px 0 0; }
   .contact-section { padding-bottom: 50px; }
@@ -270,7 +273,6 @@ a.contact-row:hover b { color: var(--cyan); }
   .role { min-height: auto; }
   .contact-panel { padding: 22px; }
   .contact-intro h2 { font-size: 26px; }
-  .pending { font-size: 6px; }
   .contact-icon { width: 32px; height: 32px; }
   .contact-row { gap: 9px; }
 }
